@@ -3,4 +3,5 @@ import jinja2
 
 
 class Principal(Handler):
-  print "hola"
+  def get(self):
+    self.render("index.html")
