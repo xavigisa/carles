@@ -44,5 +44,6 @@
 
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/carles/manegador</path>
+<path>/carles/pagines</path>
 </pydev_pathproperty>
 </pydev_project>
