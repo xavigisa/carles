@@ -1,4 +1,4 @@
-from manegador import Handler
+from manegador.manegador import Handler
 
 
 class Principal(Handler):
