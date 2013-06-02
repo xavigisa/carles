@@ -1,2 +1,13 @@
-fatal: Path 'carles.py' is in the index, but not at stage 3.
-Did you mean ':0:carles.py'?
+import manegador
+
+from principal.principal import Principal
+
+import webapp2
+
+
+
+
+
+
+app = app = webapp2.WSGIApplication([('/', Principal)],
+                                    debug=True)
