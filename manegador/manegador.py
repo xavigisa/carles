@@ -20,3 +20,12 @@ class Handler(webapp2.RequestHandler):
 
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
+        
+    def Configurar_idioma(self,idioma):
+        self.response.set_cookie('lang',idioma) #, secure=True)
+        
+    def Idioma(self):
+        lang = self.request.cookies.get('lang')
+        if not lang:
+            lang = 'ca'
+        return lang

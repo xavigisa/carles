@@ -1,4 +1,5 @@
 import manegador
+
 from principal.principal import Principal
 
 import webapp2
