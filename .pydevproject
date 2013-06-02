@@ -42,7 +42,5 @@
 <value>/home/xavi/Programacio/google_appengine</value>
 </pydev_variables_property>
 
-<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
-<path>/carles/manegador</path>
-</pydev_pathproperty>
+
 </pydev_project>

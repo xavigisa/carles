@@ -1,5 +1,5 @@
 import manegador
-import pagines
+from principal.principal import Principal
 
 import webapp2
 
@@ -8,5 +8,5 @@ import webapp2
 
 
 
-app = app = webapp2.WSGIApplication([('/', pagines.Principal)],
+app = app = webapp2.WSGIApplication([('/', Principal)],
                                     debug=True)
