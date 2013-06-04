@@ -1,4 +1,3 @@
-import manegador
 from pagines.pagines import Principal
 
 import webapp2

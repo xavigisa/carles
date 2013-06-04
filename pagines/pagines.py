@@ -1,5 +1,7 @@
+#from manegador.manegador import Handler
 from manegador.manegador import Handler
-import jinja2
+
+
 
 
 class Principal(Handler):
