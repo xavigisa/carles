@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+
+
+                      		
+
+
+{% block menu %}
+  <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Navegació <span class="icon-chevron-down icon-white"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+      <ul class="nav nav-pills ddmenu">
+                                <li class="dropdown active"><a href="index.html">Inici</a></li>
+                                <li class="dropdown"><a href="grid.html">Serveis</a></li>
+                                <li class="dropdown"><a href="grid.html">Localització i Tarifes</a></li>
+                                <li class="dropdown"><a href="grid.html">Contacte</a></li>
+                                <li class="dropdown"><a href="grid.html">Condicions</a></li>
+                                <li class="dropdown">
+                                    <a href="page.html" class="dropdown-toggle"> Enllaços<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle">Dropdown Item &nbsp;&raquo;</a>
+                                            <ul class="dropdown-menu sub-menu">
+                                                <li><a href="#">Dropdown Item</a></li>
+                                                <li><a href="#">Dropdown Item</a></li>
+                                                <li><a href="#">Dropdown Item</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Dropdown Item</a></li>
+                                        <li><a href="#">Dropdown Item</a></li>
+                                        <li><a href="#">Dropdown Item</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+            </div>
+{% endblock %}

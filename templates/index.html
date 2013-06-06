@@ -5,8 +5,8 @@
     <title>Your Name - Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">  
-    
+    <meta name="author" content="">
+
     <link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="scripts/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -30,98 +30,77 @@
 <link href="scripts/carousel/style.css" rel="stylesheet" type="text/css" /><link href="scripts/tweet/jquery.tweet.css" rel="stylesheet" type="text/css" />
 
     <link href="http://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis+Light" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis+Light" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
 
     <link href="styles/custom.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="pageBody">
 
-<div id="decorative2">
-    <div class="container">
+<div id="divBoxed" class="container">
 
-        <div class="divPanel topArea notop nobottom">
+    <div class="transparent-bg" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;zoom: 1;"></div>
+
+    <div class="divPanel notop nobottom">
             <div class="row-fluid">
-                <div class="span12">
+                <div class="span12">					
 
-                    <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Your Name</a><br />
-                        <a href="index.html" id="divTagLine">Your Tag Line Here</a>
+                    <div id="divLogo">
+                        <a href="index.html" id="divSiteTitle">Student's Home</a><br />
+                        <a href="index.html" id="divTagLine">Allotjaments Universitaris</a>
                     </div>
 
-                    <div id="divMenuRight" class="pull-right">
+	            </div>
+            </div>   
+            <div class="row-fluid">
+                <div class="span12">				
+                    <div class="centered_menu">                      
                     <div class="navbar">
-                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
-                            NAVIGATION <span class="icon-chevron-down icon-white"></span>
-                        </button>
-                        <div class="nav-collapse collapse">
-                            <ul class="nav nav-pills ddmenu">
-                                <li class="dropdown active"><a href="index.html">Home</a></li>
-                                <li class="dropdown">
-                                    <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle">Dropdown Item &nbsp;&raquo;</a>
-                                            <ul class="dropdown-menu sub-menu">
-                                                <li><a href="#">Dropdown Item</a></li>
-                                                <li><a href="#">Dropdown Item</a></li>
-                                                <li><a href="#">Dropdown Item</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Dropdown Item</a></li>
-                                        <li><a href="#">Dropdown Item</a></li>
-                                        <li><a href="#">Dropdown Item</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="grid.html">Grid</a></li>
-                                <li class="dropdown"><a href="simple.html">Simple</a></li>
-                            </ul>
-                        </div>
+							{% block menu %}
+							{% endblock %}
+                    </div>                     
                     </div>
-                    </div>
-
-                </div>
+	            </div>
             </div>
-        </div>
 
-    </div>
-</div>
-
-<div id="decorative1" style="position:relative">
-    <div class="container">
-
-        <div class="divPanel headerArea">
             <div class="row-fluid">
                 <div class="span12">
+    
+                    <div id="headerSeparator"></div>
 
-                        <div id="headerSeparator"></div>
+                    <div class="row-fluid">
+                        <div class="span6">
 
-                        <div id="divHeaderText" class="page-content">
-                            <div id="divHeaderLine1">Your Header Text Here!</div><br />
-                            <div id="divHeaderLine2">2nd line header text for calling extra attention..</div><br />
-                            <div id="divHeaderLine3"><a class="btn btn-primary" href="#">Primary Button</a></div>
+                            <div id="divHeaderText" class="page-content">
+                                <div id="divHeaderLine1">Your Header Text Here!</div><br />
+                                <div id="divHeaderLine2">2nd Line Header Text for calling extra attention to featured content or information.</div><br />
+                                <div id="divHeaderLine3"><a class="btn btn-secondary" href="#">Secondary Button</a>    <a class="btn btn-primary" href="#">Primary Button</a></div>
+                            </div>
+
                         </div>
+                        <div class="span6">
 
-                        <div id="headerSeparator2"></div>
+                            <div id="imgHeader">
+                                <img src="styles/macbook.png" title="" />
+                            </div>
 
+                        </div>
+                    </div>
+
+                    <div id="headerSeparator2"></div>
+        
                 </div>
             </div>
-
-        </div>
-
     </div>
-</div>
 
-<div id="contentOuterSeparator"></div>
+    <div class="contentArea">
 
-<div class="container">
+        <div class="divPanel notop page-content">
 
-    <div class="divPanel page-content">
+            
 
-        <div class="row-fluid">
+            <div class="row-fluid">
 
                 <div class="span12" id="divMain">
 
@@ -206,16 +185,13 @@
 
             </div>
 
-        <div id="footerInnerSeparator"></div>
+            <div id="footerInnerSeparator"></div>
+        </div>
     </div>
 
-</div>
+    <div id="footerOuterSeparator"></div>
 
-<div id="footerOuterSeparator"></div>
-
-<div id="divFooter" class="footerArea">
-
-    <div class="container">
+    <div id="divFooter" class="footerArea">
 
         <div class="divPanel">
 
@@ -305,13 +281,11 @@
                     </p>
                 </div>
             </div>
-            <br />
 
         </div>
-
     </div>
-    
 </div>
+<br /><br /><br />
 
 <script src="scripts/jquery.min.js" type="text/javascript"></script> 
 <script src="scripts/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
