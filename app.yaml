@@ -7,12 +7,25 @@ threadsafe: yes
 handlers:
 - url: /scripts
   static_dir: scripts
+- url: /es/scripts
+  static_dir: scripts  
+- url: /en/scripts
+  static_dir: scripts
 
 - url: /styles
+  static_dir: styles
+- url: /es/styles
+  static_dir: styles  
+- url: /en/styles
   static_dir: styles
 
 - url: /img
   static_dir: img
+- url: /es/img
+  static_dir: img  
+- url: /en/img
+  static_dir: img
+  
   
 - url: /.*
   script: carles.app

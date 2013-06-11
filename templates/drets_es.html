@@ -1,0 +1,87 @@
+{% extends 'bases/index.html' %}
+
+{% block llengua %}
+	<div id="llengua"><a href="/drets">Català</a>/<a href="/es/drets">Castellano</a>/<a href="/en/drets">English</a></div>
+{% endblock %}
+
+                      		
+
+
+{% block menu %}
+  <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Navegació <span class="icon-chevron-down icon-white"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+      <ul class="nav nav-pills ddmenu">
+                                <li class="dropdown"><a href="/es">Inicio</a></li>
+                                <li class="dropdown"><a href="/es/concepte">Concepte</a></li>
+                                <li class="dropdown active"><a href="/es/drets">Drets, Equipament i Serveis</a></li>
+                                <li class="dropdown"><a href="grid.html">Localització i Tarifes</a></li>
+                                <li class="dropdown"><a href="grid.html">Condicions</a></li>
+                                <li class="dropdown"><a href="grid.html">Contacte</a></li>
+                                <li class="dropdown"><a href="grid.html">Reserves</a></li>
+                            </ul>
+            </div>
+{% endblock %}
+
+
+
+{% block contingut %}
+   <h1>Drets, Equipaments i Serveis</h1>
+   	<div class="row-fluid">
+   		<div class="span10 offset1">
+
+                    <p> En el Preu d'un Allotjament Residencial Universitari STUDENTS' HOME es contempla els següents DRETS i EQUIPAMENT:
+                    </p>
+                    
+                		<div class="span8 offset1">
+                    		<ol>
+	                    		<li>Estança i Equipament Exclusiu de Client:Habitació 
+	                    			<a href="#"  id="patata" data-toggle="popover" data-placement="top" data-content="En funció de la disponibilitat les Habitacions poden tenir diferents superfícies (m2)" >Individual(*)</a>
+	                    			,llit individual(com a mínim),tauleta de nit,taula d'estudi,prestatgeria i armari individual(com a mínim).</li>
+	                    		<li>Estances  no exclusives o compartides:Dret d'Ús d'Espais Comuns;distribuïdors,passadissos,sales,menjadors,banys,cuina,terrasses,safareig i qualsevol altra estança de tipus no exclusiu.</li>
+	                    		<li>Equipaments Comuns o Compartits del Client:Rentadora,Taula de Planxar,Planxa,Nevera i qualsevol altra de la mateixa natura subministrat per STUDENTS' HOME.</li>
+	                    	</ol>
+	                    
+							<hr style="margin:45px 0 35px" />
+						</div>
+		</div>
+		<div class="span10 offset1">
+						
+							
+							<p>
+								SERVEIS:Els serveis que oferim en els nostres Habitatges Residencials Universitaris STUDENTS' HOME i als quals es ens referim podran ser Comuns o Addicionals.
+							</p>
+							<div class= "span8 offset1">
+								<ol>
+									<li>Serveis Comuns: són aquells als quals tenen dret tots els Clients d'un Habitatge Universitari STUDENTS' HOME i estan inclosos en el Preu què el Client paga</li>
+									<ul>
+										<li>Connexió WI-FI a Internet i Comunicació Telefònica(només trucades entrants).</li>
+										<li>Servei de Neteja.Setmanalment tindrà lloc un servei de neteja dels espais comuns no 	exclusius esmentats al punt 2</li>
+									</ul>
+									
+									<li>Serveis Addicionals: són aquells que es pacten a les Condicions Particulars a la formalització del Contracte de Prestació de Servei d'Allotjament Residencial Universitari.</li>
+									<ul>
+										<li>Servei de Neteja dels Espais Privatius no Comuns.</li>
+										<li>Servei de Bugada i Planxat.</li>
+									</ul>
+								</ol>
+							</div>
+		                   
+		                  <br />
+		          
+                  
+                  
+        </div>
+        
+    </div>
+                  
+                 
+{% endblock %}
+
+{% block codi %}
+	<script>
+		$('#patata').popover()	
+	</script>
+	
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'bases/index.html' %}
+
+
+{% block llengua %}
+	<div id="llengua"><a href="/concepte">Català</a>/<a href="/es/concepte">Castellano</a>/<a href="/en/concepte">English</a></div>
+{% endblock %}
+
+
+{% block menu %}
+  <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Navegació <span class="icon-chevron-down icon-white"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+      <ul class="nav nav-pills ddmenu">
+                                <li class="dropdown"><a href="/en">Home</a></li>
+                                <li class="dropdown active"><a href="/en/concepte">Concepte</a></li>
+                                <li class="dropdown"><a href="/en/drets">Drets, Equipament i Serveis</a></li>
+                                <li class="dropdown"><a href="grid.html">Localització i Tarifes</a></li>
+                                <li class="dropdown"><a href="grid.html">Condicions</a></li>
+                                <li class="dropdown"><a href="grid.html">Contacte</a></li>
+                                <li class="dropdown"><a href="grid.html">Reserves</a></li>
+                            </ul>
+            </div>
+{% endblock %}
+
+
+
+{% block contingut %}
+   <h1>Concepte</h1>
+   	<div class="row-fluid">
+   		<div class="span10 offset1">
+
+                    <p> STUDENTS' HOME ofereix a La Comunitat Universitària (Estudiants,Investigadors,Professors)  Allotjaments en Habitatges Universitaris compartits situats al Barri Vell,Centre i altres indrets de la Ciutat de Girona.
+                    </p>
+                    <p>La nostra Filosofia és la d'oferir Allotjament Comfortable,Equipat i sense els maldecaps que comporten les Gestions Domèstiques,per a tots els Universitaris a qui els agrada viure a la Ciutat i “Viure la Ciutat”.</p>
+                    <p>També és la nostra preocupació el fet d'apropar les diferents Universitats,Facultats,Escoles Universitàries al domicili de l'Estudiant Universitari.Així podràs escollir l'Habitatge que més t'interessi en funció de la proximitat al teu Centre d'Estudi amb l'estalvi de temps i transport que això representa</p>
+                    <p> La vida d'Estudiant Universitari és certament apassionant però tots sabem que no és fàcil en els temps actuals.Sabent tot això tenim unes Tarifes adaptades a les teves necessitats perquè la teva butxaca no se'n ressenteixi i sempre amb els serveis i la gestió que tú necessites.</p>
+		</div>
+        
+    </div>
+                  
+                 
+{% endblock %}
