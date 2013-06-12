@@ -26,6 +26,9 @@ handlers:
 - url: /en/img
   static_dir: img
   
+- url: /fitxers
+  static_dir: fitxers
+  
   
 - url: /.*
   script: carles.app

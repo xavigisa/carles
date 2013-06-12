@@ -1,7 +1,7 @@
 from principal.principal import Principal, Principal_es, Principal_en
 from drets.drets import Drets, Drets_es, Drets_en
 from concepte.concepte import Concepte, Concepte_es, Concepte_en
-
+from condicions.condicions import Condicions
 
 import webapp2
 
@@ -10,7 +10,7 @@ import webapp2
 
 
 
-app = app = webapp2.WSGIApplication([('/', Principal),
+app = webapp2.WSGIApplication([('/', Principal),
                                      ('/es', Principal_es),
                                      ('/en', Principal_en),
                                      ('/drets',Drets),
@@ -18,5 +18,6 @@ app = app = webapp2.WSGIApplication([('/', Principal),
                                      ('/en/drets',Drets_en),
                                      ('/concepte',Concepte),
                                      ('/es/concepte',Concepte_es),
-                                     ('/en/concepte',Concepte_en)],
+                                     ('/en/concepte',Concepte_en),
+                                     ('/condicions', Condicions)],
                                     debug=True)

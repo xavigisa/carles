@@ -1,0 +1,34 @@
+{% extends 'bases/index.html' %}
+
+{% block llengua %}
+	<div class="pull-right" id="llengua"><div id="llengua"><a href="/concepte">Català</a>/<a href="/es/concepte">Castellano</a>/<a href="/en/concepte">English</a></div></div>
+{% endblock %}
+
+
+                      		
+
+
+{% block menu %}
+  <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Navegació <span class="icon-chevron-down icon-white"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+      <ul class="nav nav-pills ddmenu">
+                                <li class="dropdown"><a href="/">Inici</a></li>
+                                <li class="dropdown"><a href="/concepte">Concepte</a></li>
+                                <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
+                                <li class="dropdown"><a href="grid.html">Localització i Tarifes</a></li>
+                                <li class="dropdown active"><a href="grid.html">Condicions</a></li>
+                                <li class="dropdown"><a href="grid.html">Contacte</a></li>
+                                <li class="dropdown"><a href="grid.html">Reserves</a></li>
+                            </ul>
+            </div>
+{% endblock %}
+
+
+
+{% block contingut %}
+
+				<embed src="fitxers/reglamentRI.pdf" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+
+{% endblock %}
