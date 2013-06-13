@@ -3,6 +3,7 @@ from drets.drets import Drets, Drets_es, Drets_en
 from concepte.concepte import Concepte, Concepte_es, Concepte_en
 from condicions.condicions import Condicions
 from contacte.contacte import Contacte
+from apartaments.apartaments import Apartaments
 
 import webapp2
 
@@ -21,5 +22,6 @@ app = webapp2.WSGIApplication([('/', Principal),
                                      ('/es/concepte',Concepte_es),
                                      ('/en/concepte',Concepte_en),
                                      ('/condicions', Condicions),
-                                     ('/contacte',Contacte)],
+                                     ('/contacte',Contacte),
+                                     ('/tarifes',Apartaments)],
                                     debug=True)
