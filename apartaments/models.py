@@ -2,9 +2,17 @@ from google.appengine.ext import db
 
 class Apartament(db.Model):
     nom = db.StringProperty()
-    disponible = db.BooleanProperty()
-    localitzacio = db.GeoPtProperty()
     descripcio = db.TextProperty()
+    nom_es = db.StringProperty()
+    descripcio_es = db.TextProperty()
+    nom_en = db.StringProperty()
+    descripcio_en = db.TextProperty()
+    disponible = db.BooleanProperty()
+    
+    localitzacio = db.GeoPtProperty()
+    
+    preu = db.FloatProperty()
+    
 
 class Fotos(db.Model):
     nom = db.ReferenceProperty(Apartament)
