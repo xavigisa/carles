@@ -2,6 +2,7 @@
 import webapp2
 import os
 import jinja2
+from google.appengine.api import users
 
 template_dir = os.path.join(os.path.dirname(__file__),'../templates')
 
@@ -29,3 +30,12 @@ class Handler(webapp2.RequestHandler):
         if not lang:
             lang = 'ca'
         return lang
+    
+    def Es_administrador(self):
+        user = users.get_current_user()
+        if users.is_current_user_admin():
+            return True
+        #if user:
+            #return (user.nickname() in ['javiergimenezsanchez','xavi.gisa'])
+        else:
+            return False

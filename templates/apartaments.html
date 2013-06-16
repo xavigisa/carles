@@ -85,6 +85,11 @@
 					<div>{{apar.descripcio}}</div>
 					
 					</div>
+				<div id="fotos">
+					{% for x in apar.fotos() %}
+						<div> {{x.descripcio}}</div>
+					{% endfor %}
+				</div>
 		 </div>
 	{% endfor %}
 	<div id="map-canvas" style="width: 100px; height: 100px"></div>

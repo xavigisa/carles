@@ -29,7 +29,10 @@ handlers:
 - url: /fitxers
   static_dir: fitxers
   
-  
+- url: /gestio
+  script: carles.app
+  login: admin
+
 - url: /.*
   script: carles.app
 

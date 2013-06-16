@@ -13,9 +13,13 @@ class Apartament(db.Model):
     
     preu = db.FloatProperty()
     
+    def fotos(self):
+        f = Fotos().all().filter('apartament =',self)
+        return f
+    
 
 class Fotos(db.Model):
-    nom = db.ReferenceProperty(Apartament)
+    apartament = db.ReferenceProperty(Apartament)
     foto = db.BlobProperty()
     descripcio = db.TextProperty()
     

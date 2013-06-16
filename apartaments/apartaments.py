@@ -1,5 +1,5 @@
 from manegador.manegador import Handler
-from models import Apartament
+from models import Apartament, Fotos
 
 
 class Apartaments(Handler):
@@ -7,6 +7,8 @@ class Apartaments(Handler):
         a = Apartament.all()
         parametres = {}
         parametres['apartaments'] = a
+        #fotos = Fotos.all().filter('apartament =',a)
+        #parametres['fotos'] = fotos
         self.render("apartaments.html", **parametres)
         
         
