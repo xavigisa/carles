@@ -23,3 +23,23 @@ class Foto(webapp2.RequestHandler):
         else:
             self.error(404)
         
+        
+class Foto_petita(webapp2.RequestHandler):
+    def get(self,identificador):
+        if identificador:
+            key = db.Key.from_path('Fotos', int(identificador))
+            f = db.get(key)
+            #f = Fotos.get_by_id(int(self.request.get("identificador")))
+            if f:
+                imatge = images.Image(f.foto)
+                imatge.resize(width=100, height=75)
+                imatge.im_feeling_lucky()
+                thumbnail = imatge.execute_transforms(output_encoding=images.JPEG)
+            
+                self.response.headers['Content-Type'] = 'image/jpeg'
+                self.response.out.write(thumbnail)
+            else:
+                self.error(404)
+        else:
+            self.error(404)
+        

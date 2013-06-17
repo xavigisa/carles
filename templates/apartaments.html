@@ -46,7 +46,7 @@
 				<div id="fotos">
 					<map name="image_map{{nombre}}">
 						{% for x in apar.fotos() %}
-							<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}]" title="{{apar.nom}}"><img src="fotos/{{x.key().id()}}" width="60" height="60" alt="{{apar.nom}}" /></a>
+							<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}]" title="{{apar.nom}}"><img src="fotos_petites/{{x.key().id()}}" width="60" height="60" alt="{{apar.nom}}" /></a>
 	
 						{% endfor %}
 					</map>

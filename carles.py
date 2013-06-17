@@ -5,7 +5,7 @@ from condicions.condicions import Condicions
 from contacte.contacte import Contacte
 from apartaments.apartaments import Apartaments
 from apartaments.gestio import Gestio
-from foto.foto import Foto
+from foto.foto import Foto, Foto_petita
 
 import webapp2
 
@@ -27,5 +27,6 @@ app = webapp2.WSGIApplication([('/', Principal),
                                      ('/contacte',Contacte),
                                      ('/tarifes',Apartaments),
                                      ('/gestio',Gestio),
-                                     ('/fotos/([0-9]+)',Foto)],
+                                     ('/fotos/([0-9]+)',Foto),
+                                     ('/fotos_petites/([0-9]+)',Foto_petita)],
                                     debug=True)
