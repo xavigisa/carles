@@ -15,7 +15,7 @@
                         <div class="nav-collapse collapse">
       <ul class="nav nav-pills ddmenu">
                                 <li class="dropdown"><a href="/">Inici</a></li>
-                                <li class="dropdown"><a href="/concepte">Concepte</a></li>
+                                
                                 <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
                                 <li class="dropdown active"><a href="/tarifes">Localització i Tarifes</a></li>
                                 <li class="dropdown"><a href="/condicions">Condicions</a></li>
@@ -57,20 +57,22 @@
 		
 	
 				<div class="row-fluid">
-					<div class="span4">
-
+					
 						{% for h in apar.llistat_habitatges() %}
-							<h3>{{h.nom}}</h3>
-							{% set nombre2 = 1 %}
-							{% for x in h.llistat_fotos() %}
-								<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}"><img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" /></a>
-								{% set nombre2 = nombre2 +1 %}
-							{% endfor %}
-						
-							<div>{{h.descripcio}}</div>
-							<div class="alert-info">{{h.preu}}</div>
+							<div class="span4 alert">
+	
+								<h3>{{h.nom}}</h3>
+								{% set nombre2 = 1 %}
+								{% for x in h.llistat_fotos() %}
+									<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}"><img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" /></a>
+									{% set nombre2 = nombre2 +1 %}
+								{% endfor %}
+							
+								<div>{{h.descripcio}}</div>
+								<div ><span  class="span8 offset2 alert-info">Preu: {{h.preu}} euros</span></div>
+							</div>
 						{% endfor %}
-					</div>
+					
 				</div>
 					
 				
