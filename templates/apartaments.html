@@ -36,7 +36,7 @@
 					<div id="fotos" class="span4 ">
 						<h3>Fotos</h3>
 						<map name="image_map{{nombre}}">
-							{% for x in apar.fotos() %}
+							{% for x in apar.llistat_fotos() %}
 								<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}]" title="{{apar.nom}}"><img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{apar.nom}}" /></a>
 		
 							{% endfor %}
@@ -55,24 +55,11 @@
 					</div>
 				</div>
 				
-				
-				<div class="row-fluid">
-					<div class="span10 offset1">
-						<h3>Equipament</h3>
-							{{apar.equipament}}
-					</div>
-				</div>
-				
-				<div class="row-fluid">
-					<div class="span10 offset1">
-						<h3>Serveis</h3>
-							{{apar.serveis}}
-					</div>
-				</div>
+		
 	
 				<div class="row-fluid">
 					<div class="span6 offset3">
-						<div class="alert alert-error"><h3>Preu:</h3>{{apar.preu}} euros</div>
+						<div class="alert alert-error"><h3>Preu:</h3>500 euros</div>
 					</div>
 				</div>
 					
@@ -99,7 +86,7 @@
 		{% for apar in apartaments %}
 		        var mapOptions = {
 		          center: new google.maps.LatLng({{apar.localitzacio}}),
-		          zoom: 4,
+		          zoom: 18,
 		          mapTypeId: google.maps.MapTypeId.ROADMAP
 		        };
 		        var map = new google.maps.Map(document.getElementById("map-canvas{{nombre}}"),

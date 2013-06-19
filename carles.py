@@ -1,10 +1,11 @@
 from principal.principal import Principal, Principal_es, Principal_en
 from drets.drets import Drets, Drets_es, Drets_en
 from concepte.concepte import Concepte, Concepte_es, Concepte_en
+from reserves.reserves import Reserves
 from condicions.condicions import Condicions
 from contacte.contacte import Contacte
 from apartaments.apartaments import Apartaments
-from apartaments.gestio import Gestio
+from apartaments.gestio import Gestio, Habitatges
 from foto.foto import Foto, Foto_petita
 
 import webapp2
@@ -26,7 +27,9 @@ app = webapp2.WSGIApplication([('/', Principal),
                                      ('/condicions', Condicions),
                                      ('/contacte',Contacte),
                                      ('/tarifes',Apartaments),
-                                     ('/gestio',Gestio),
+                                     ('/reserves',Reserves),
+                                     ('/gestio/apartament',Gestio),
+                                     ('/gestio/habitatge',Habitatges),
                                      ('/fotos/([0-9]+)',Foto),
                                      ('/fotos_petites/([0-9]+)',Foto_petita)],
                                     debug=True)

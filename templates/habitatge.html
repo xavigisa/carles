@@ -19,16 +19,22 @@
 
 
 {% block contingut %}
-   <h1>Gestió</h1>
+   <h1>Gestió Habitatges</h1>
+   
    	<form method="post"  enctype="multipart/form-data">
+   		<label>Apartament</label>
+   		  <select name="apartament" >
+	   		  {% for apar in apartaments %}
+	   		  	<option value="{{apar.key().id()}}">{{apar.nom}}</option>
+	   		  {% endfor %}
+   		  </select>
+   		
    		<label>Nom</label>
    		<input type="text" name="nom"/>
-   		<label>Latitut</label>
-   		<input type="text" name="lat"/>
-   		<label>Longitut</label>
-   		<input type="text" name="lon"/>
-   		<label>Adreça</label>
-   		<input type="text" name="adreca"/>
+   		
+
+   		<label>Preu</label>
+   		<input type="text" name="preu"/>
    		
    		<label>Descripció</label>
    		<textarea name="descripcio"></textarea>

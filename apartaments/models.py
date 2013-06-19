@@ -3,31 +3,37 @@ from google.appengine.ext import db
 class Apartament(db.Model):
     nom = db.StringProperty()
     descripcio = db.TextProperty()
-    equipament = db.TextProperty()
-    serveis = db.TextProperty()
     nom_es = db.StringProperty()
     descripcio_es = db.TextProperty()
-    equipament_es = db.TextProperty()
-    serveis_es = db.TextProperty()
     nom_en = db.StringProperty()
     descripcio_en = db.TextProperty()
-    equipament_en  = db.TextProperty()
-    serveis_en = db.TextProperty()
-    
-    disponible = db.BooleanProperty()
     localitzacio = db.GeoPtProperty()
-    preu = db.FloatProperty()
-    superficie = db.FloatProperty()
+    adreca = db.StringProperty()
+    fotos = db.ListProperty(db.Key)
  
-    def fotos(self):
-        f = Fotos().all().filter('apartament =',self)
+    def llistat_fotos(self):
+        f = Fotos().all().filter('__key__ in',self.fotos)
         return f
     
 
 class Fotos(db.Model):
-    apartament = db.ReferenceProperty(Apartament)
     foto = db.BlobProperty()
     descripcio = db.TextProperty()
+
+class Habitatge(db.Model):
+    nom = db.StringProperty()
+    nom_es = db.StringProperty()
+    nom_en = db.StringProperty()
+    descripcio = db.TextProperty()
+    descripcio_es = db.TextProperty()
+    descripcio_en = db.TextProperty()
+    preu = db.FloatProperty()
+    apartament = db.ReferenceProperty(Apartament)
+    fotos = db.ListProperty(db.Key)
+    
+    def llistat_fotos(self):
+        f = Fotos().all().filter('__key__ in',self.fotos)
+        return f   
     
     
 ########## Exemple #################
