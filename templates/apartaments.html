@@ -33,7 +33,7 @@
 		<div class="hero-unit">
 			<h1>{{apar.nom}}</h1>
 			 	<div class="row-fluid">
-					<div id="fotos" class="span4 ">
+					<div id="fotos" class="span3">
 						<h3>Fotos</h3>
 						<map name="image_map{{nombre}}">
 							{% for x in apar.llistat_fotos() %}
@@ -42,28 +42,38 @@
 							{% endfor %}
 						</map>
 					</div>
-					<div id="fotos" class="span5 offset2">
+					<div id="fotos" class="span5">
 						<h3>Localització</h3>
 						<div  id="map-canvas{{nombre}}" style="width: 350px; height: 300px"></div>
 					</div>
-				</div>
-				
-				<div class="row-fluid">
-					<div class="span10 offset1">
+					<div class="span4">
 						<h3>Descripció</h3>
 							{{apar.descripcio}}
 					</div>
 				</div>
 				
+				
+				
 		
 	
 				<div class="row-fluid">
-					<div class="span6 offset3">
-						<div class="alert alert-error"><h3>Preu:</h3>500 euros</div>
+					<div class="span4">
+
+						{% for h in apar.llistat_habitatges() %}
+							<h3>{{h.nom}}</h3>
+							{% set nombre2 = 1 %}
+							{% for x in h.llistat_fotos() %}
+								<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}"><img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" /></a>
+								{% set nombre2 = nombre2 +1 %}
+							{% endfor %}
+						
+							<div>{{h.descripcio}}</div>
+							<div class="alert-info">{{h.preu}}</div>
+						{% endfor %}
 					</div>
 				</div>
 					
-			
+				
 				
 				
 				{% set nombre = nombre +1 %}

@@ -15,7 +15,10 @@ class Apartament(db.Model):
         f = Fotos().all().filter('__key__ in',self.fotos)
         return f
     
-
+    def llistat_habitatges(self):
+        h = Habitatge().all().filter('apartament =',self.key())
+        return h
+    
 class Fotos(db.Model):
     foto = db.BlobProperty()
     descripcio = db.TextProperty()
