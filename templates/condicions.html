@@ -17,8 +17,8 @@
                                 <li class="dropdown"><a href="/">Inici</a></li>
                                 
                                 <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
-                                <li class="dropdown"><a href="grid.html">Localització i Tarifes</a></li>
-                                <li class="dropdown active"><a href="/condicions">Condicions</a></li>
+                                <li class="dropdown"><a href="/tarifes">Localització i Tarifes</a></li>
+                                <li class="dropdown active"><a href="/condicions">Condicions i contracte</a></li>
                                 <li class="dropdown"><a href="/contacte">Contacte</a></li>
                                 <li class="dropdown"><a href="/reserves">Reserves</a></li>
                             </ul>
@@ -28,8 +28,16 @@
 
 
 {% block contingut %}
-		<div class="span10 offset1">
+		<div class="span6 offset3">
+			
+			<p>Aquí disposeu dels enllaços per descarregar-vos en format pdf:</p>
+				<ul>
+					<li><a href="fitxers/reglamentRI.pdf" target="_blank">Reglament de règim intern</a></li>
+					<li><a href="fitxers/contracte_student_life.pdf" target="_blank">Contracte</a></li>
+				</ul>			
+			
+			
 
-				<embed id="mostrar_pdf" src="fitxers/reglamentRI.pdf" width="700" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">></embed>
+				<!--embed id="mostrar_pdf" src="fitxers/reglamentRI.pdf" width="700" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">></embed-->
 		</div>
 {% endblock %}

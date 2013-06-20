@@ -18,7 +18,7 @@
                                 
                                 <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
                                 <li class="dropdown active"><a href="/tarifes">Localització i Tarifes</a></li>
-                                <li class="dropdown"><a href="/condicions">Condicions</a></li>
+                                <li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
                                 <li class="dropdown"><a href="/contacte">Contacte</a></li>
                                 <li class="dropdown"><a href="/reserves">Reserves</a></li>
                             </ul>
@@ -30,7 +30,7 @@
 {% block contingut %}
 	{% set nombre = 1 %}
 	{% for apar in apartaments %}
-		<div class="hero-unit">
+		<div class="sidebar">
 			<h1>{{apar.nom}}</h1>
 			 	<div class="row-fluid">
 					<div id="fotos" class="span3">
@@ -59,7 +59,7 @@
 				<div class="row-fluid">
 					
 						{% for h in apar.llistat_habitatges() %}
-							<div class="span4 alert">
+							<div class="span4 alert-success">
 	
 								<h3>{{h.nom}}</h3>
 								{% set nombre2 = 1 %}
@@ -69,7 +69,7 @@
 								{% endfor %}
 							
 								<div>{{h.descripcio}}</div>
-								<div ><span  class="span8 offset2 alert-info">Preu: {{h.preu}} euros</span></div>
+								<div ><span  class="span8 offset2 alert-error">Preu: {{h.preu}} euros</span></div>
 							</div>
 						{% endfor %}
 					
