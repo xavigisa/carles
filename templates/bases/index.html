@@ -48,8 +48,8 @@
                 <div class="span12">
 
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Student Life</a><br />
-                        <a href="index.html" id="divTagLine"></a>
+                       <a href="index.html" id="divSiteTitle">Student Life</a><br />
+                       
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -117,6 +117,14 @@
 <script type="text/javascript">function startCamera() {$('#camera_wrap').camera({ fx: 'scrollLeft', time: 2000, loader: 'none', playPause: false, navigation: true, height: '65%', pagination: true });}$(function(){startCamera()});</script>
 {% block codi %}
 {% endblock %}
+<!--script type="text/javascript">
+$(document).ready(function(){
+	if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+{
+     $('#divMenuRight').css('float','none');
+}
+})
+</script-->
 
 </body>
 </html>

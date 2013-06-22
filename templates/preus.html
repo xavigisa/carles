@@ -23,10 +23,12 @@
    
    	<form method="post"  enctype="multipart/form-data">
    		<label>Apartament</label>
-   		  <select name="apartament" >
-	   		  {% for apar in apartaments %}
-	   		  	<option value="{{apar.key().id()}}">{{apar.nom}}</option>
-	   		  {% endfor %}
+   		  <select id= "apartaments" name="apartament" >
+   		  	<option value=""></option>
+   		  </select>
+   		  
+   		  <label>Habitatges</label>
+   		  <select id= "habitatges" name="habitatge" >
    		  </select>
    		
    		<label>Nom</label>
@@ -47,29 +49,46 @@
    		<input class="btn" type="submit" />
    	</form>
          
-	
+
 		
 		
-	
-        
-<script type="text/javascript">
-  function ferLlistaFitxers() {
-    var input = document.getElementById("imatges");
-    var ul = document.getElementById("fileList");
-    while (ul.hasChildNodes()) {
-      ul.removeChild(ul.firstChild);
-    } 
-    for (var i = 0; i < input.files.length; i++) {
-      var li = document.createElement("li");
-      li.innerHTML = input.files[i].name;
-      ul.appendChild(li);
-    }
-    if(!ul.hasChildNodes()) {
-      var li = document.createElement("li"); 
-      li.innerHTML = 'No Files Selected';
-      ul.appendChild(li);
-    }
-  } 
-</script>      
+    
                  
+{% endblock %}
+
+{% block codi %}
+<script>
+	$.getJSON("http://localhost:8080/gestio/consulta?taula=apartament",
+		function(data) {
+			$.each(data, function(key,val){
+				$('#apartaments').append('<option value="' + val + '">'+key+'</option>')
+			});
+		});
+		
+	$('#apartaments').change(function(){
+		$("#habitatges > option").remove();
+		$.getJSON("http://localhost:8080/gestio/consulta?taula=habitatge;apartament_id="+$(this).val(),
+			function(data) {
+				$.each(data, function(key,val){
+					$('#habitatges').append('<option value="' + val + '">'+key+'</option>')
+				});
+			});
+	});
+	
+	$(document).ready(
+		function() {
+			var hola = $("#apartaments option:first").val();
+			var url = "http://localhost:8080/gestio/consulta?taula=habitatge;apartament_id="+hola;
+			console.log(hola);
+			$.getJSON(url,
+			function(data) {
+				console.log('hola');
+				$.each(data, function(key,val){
+					$('#habitatges').append('<option value="' + val + '">'+key+'</option>')
+				});
+			});
+			
+		}
+	)
+</script>
 {% endblock %}
