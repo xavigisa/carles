@@ -7,24 +7,42 @@
                       		
 
 
-{% block menu %}
-  <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+{% block menu %}          
+            
+                                    <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
                             Menú <span class="icon-chevron-down icon-white"></span>
                         </button>
                         <div class="nav-collapse collapse">
-      <ul class="nav nav-pills ddmenu">
-                                <li class="dropdown active"><a href="/">Inici</a></li>
-                                <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
+                            <ul class="nav nav-pills ddmenu">
+                               <li class="dropdown active"><a href="/">Inici</a></li>
+                                <li class="dropdown">
+                                    <a href="page.html" class="dropdown-toggle">Menu <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown">
+                                        	
+                                        	 <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
+                                			
+                                			<li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
+                                			<li class="dropdown"><a href="/enllacos">Enllaços d'interés</a></li>
+                                			<li class="dropdown"><a href="/sugerencies">Sugerencies</a></li>
+                                
+                                        </li>
+                      
+                                    </ul>
+                                </li>
                                 <li class="dropdown"><a href="/tarifes">Localització i Tarifes</a></li>
-                                <li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
                                 <li class="dropdown"><a href="/contacte">Contacte</a></li>
                                 <li class="dropdown"><a href="/reserves">Reserves</a></li>
                             </ul>
-            </div>
+                        </div>
 {% endblock %}
 
 {% block resaltat %}
-	 <div class="row-fluid">
+	 <div id="decorative1" style="position:relative">
+    <div class="container">
+
+        <div class="divPanel headerArea">
+            <div class="row-fluid">
                 <div class="span12">
     
                     <div id="headerSeparator"></div>
@@ -32,16 +50,21 @@
                     <div class="row-fluid">
                         <div class="span6">
 
-                           <div id="divHeaderText" class="page-content">
+                            <div id="divHeaderText" class="page-content">
                                 <div id="divHeaderLine1">Un nou concepte d'allotjament</div><br />
                                 <div id="divHeaderLine2">Oferim habitatges confortables i equipats al centre de Girona per a tots aquells membres de la Comunitat Universària</div><br />
+                                <div id="divHeaderLine3"></div>
                             </div>
 
                         </div>
                         <div class="span6">
 
-                            <div id="imgHeader">
-                                <img src="styles/macbook.png" title="" />
+                            <div id="camera_wrap">
+								<div data-src="styles/img/capcelera1.png" ></div>
+								<div data-src="styles/img/capcelera2.png" ></div>
+								<div data-src="styles/img/capcelera3.png" ></div>
+								<div data-src="styles/img/capcelera4.png" ></div>
+								
                             </div>
 
                         </div>
@@ -51,6 +74,11 @@
         
                 </div>
             </div>
+   
+        </div>
+
+    </div>
+</div>
 {% endblock %}
 
 {% block contingut %}
@@ -76,6 +104,23 @@
                     </div>
                   <br />
                   <hr style="margin:45px 0 35px" />
+                                      <div class="list_carousel responsive">
+                        <ul id="list_photos">
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                            <li><img src="http://placehold.it/320x150/e7e7e7" class="img-polaroid">  </li>
+                        </ul>
+                    </div> 
 	<h1>Filosofia</h1> 
 
   <p> STUDENT LIFE ofereix a La Comunitat Universitària (Estudiants,Investigadors,Professors)  Allotjaments en Habitatges Universitaris compartits situats al Barri Vell,Centre i altres indrets de la Ciutat de Girona.
