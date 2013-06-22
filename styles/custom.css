@@ -12,6 +12,8 @@
 
 
 
+/***** BASE CSS *****/
+
 
 /* Site Name */
 
@@ -283,7 +285,7 @@ h1{font-family: 'Terminal Dosis Light'; font-weight: normal; font-style: normal;
 
 .sidebox a {color: rgb(211, 35, 0); font-family: 'Pontano Sans';}
 
-#decorative1 {background-color: rgb(237, 235, 232); background-image: url('a_wood_pattern.png'); background-size: auto; -webkit-background-size: cover; background-repeat: repeat repeat;}
+#decorative1 {background-color: rgb(237, 235, 232); background-image: url(subtle_stripes.png); background-size: auto; -webkit-background-size: cover; background-repeat: repeat repeat;}
 
 #decorative2{height: 135px; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;}
 
@@ -299,9 +301,9 @@ h2{font-weight: normal; font-style: normal; font-family: Terminal Dosis Light; f
 
 .breadcrumbs a {color: rgb(211, 35, 0); font-family: 'Pontano Sans';}
 
-#divHeaderLine1 {letter-spacing: 3px; word-spacing: 0px; margin-top: 31px; color: rgb(227, 38, 0); font-size: 72px; line-height: 66px; font-family: 'Wire One'; text-transform: none; text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px; font-weight: normal; font-style: normal; text-align: left; opacity: 1; padding: 0px; background-image: none; background-position: initial initial; background-repeat: initial initial;}
+#divHeaderLine1 {letter-spacing: 3px; word-spacing: 0px; margin-top: 31px; color: rgb(255, 255, 255); font-size: 72px; line-height: 66px; font-family: 'Wire One'; text-transform: none; text-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px, rgba(255, 255, 255, 0.298039) 0px -5px 35px; font-weight: normal; font-style: normal; text-align: left; opacity: 0.9; padding: 3px 10px; background-color: rgb(227, 38, 0); background-position: initial initial; background-repeat: initial initial;}
 
-#divHeaderLine2 {font-size: 18px; line-height: 34px; letter-spacing: 1px; margin-top: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: rgb(34, 34, 34); text-shadow: rgba(255, 255, 255, 0.6) 1px 1px 1px; text-align: left; font-weight: normal; font-style: italic; padding: 0px; opacity: 1; background-image: none; background-position: initial initial; background-repeat: initial initial;}
+#divHeaderLine2 {font-size: 18px; line-height: 34px; letter-spacing: 1px; margin-top: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: rgb(255, 255, 255); text-shadow: none; text-align: left; font-weight: normal; font-style: italic; padding: 3px 10px; opacity: 0.9; background-color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;}
 
 #divHeaderLine3{margin-top: 15px; color: rgb(0, 0, 0); text-align: left; text-transform: none; letter-spacing: 2px; font-size: 14px; line-height: 28px;}
 
@@ -351,19 +353,19 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; font-family: Term
 
 .nav .dropdown-toggle:hover .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(0, 0, 0);}
 
-.navbar .dropdown-menu, .dropdown-menu {background-color: rgb(255, 255, 255); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
+.navbar .dropdown-menu, .dropdown-menu {background-color:rgb(255, 255, 255);border-radius:0px;}
 
-.navbar .dropdown-menu li > a, .dropdown-menu li > a, .navbar .nav-pills .open .dropdown-toggle {color: rgb(0, 0, 0);}
+.navbar .dropdown-menu li > a, .dropdown-menu li > a, .navbar .nav-pills .open .dropdown-toggle {color:rgb(0, 0, 0)}
 
-.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a, .navbar .nav-pills .open a.dropdown-toggle:hover {filter:none;color:rgb(255, 255, 255);background-color:rgb(227, 38, 0);background-image:none}
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a, .navbar .nav-pills .open a.dropdown-toggle:hover {filter:none;color:#ffffff;background-color:#e32600;background-image:none}
 
-.navbar .nav-pills > li > a {margin-left: 2px; margin-right: 2px; padding: 10px 30px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; color: rgb(41, 41, 41); background-color: transparent; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(240, 240, 240);}
+.navbar .nav-pills > li > a {margin-left:2px;margin-right:2px;padding:10px 30px;border-radius:0px;color:rgb(41, 41, 41);background-color:transparent;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:rgb(240, 240, 240)}
 
-.navbar .nav-pills > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .navbar .nav-pills > li > a:focus {color: rgb(41, 41, 41); background-color: transparent; border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(227, 38, 0);}
+.navbar .nav-pills > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .navbar .nav-pills > li > a:focus {color:rgb(41, 41, 41);background-color:transparent;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#e32600}
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle {background:none}
 
-.navbar .nav-pills > .active > a, .navbar .nav-pills > .active > a:hover, .navbar .nav-pills li.dropdown.open > .dropdown-toggle, .navbar .nav-pills li.dropdown.active > .dropdown-toggle {color: rgb(41, 41, 41); border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: rgb(227, 38, 0); background-image: none; background-position: initial initial; background-repeat: initial initial;}
+.navbar .nav-pills > .active > a, .navbar .nav-pills > .active > a:hover, .navbar .nav-pills li.dropdown.open > .dropdown-toggle, .navbar .nav-pills li.dropdown.active > .dropdown-toggle {color:rgb(41, 41, 41);background-color:transparent;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#e32600;}
 
 .navbar .ddmenu {margin-top:45px;margin-bottom:0px}
 
