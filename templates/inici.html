@@ -7,18 +7,18 @@
                       		
 
 
-{% block menu %}          
-            
-                         <p><button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
-                           Menú <span class="icon-chevron-down icon-white"></span>
-                        </button></p>
+{% block menu %}     
+
+                        <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+                            Menú <span class="icon-chevron-down icon-white"></span>
+                        </button>             
                         <div class="nav-collapse collapse">
                             <ul class="nav nav-pills ddmenu">
                                <li class="dropdown active"><a href="/">Inici</a></li>
                                 <li class="dropdown">
                                     <a href="" class="dropdown-toggle">Menu <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown">
+                                        
                                         	
                                         	 <li class="dropdown"><a href="/drets">Drets, Equipament i Serveis</a></li>
                                 			
@@ -26,7 +26,7 @@
                                 			<li class="dropdown"><a href="/enllacos">Enllaços d'interés</a></li>
                                 			<li class="dropdown"><a href="/suggerencies">Suggerencies</a></li>
                                 
-                                        </li>
+                                       
                       
                                     </ul>
                                 </li>
@@ -38,7 +38,53 @@
 {% endblock %}
 
 {% block resaltat %}
-	 <div id="decorative1" style="position:relative">
+<div id="decorative1" style="position:relative">
+    <div class="container">
+
+        <div class="divPanel headerArea">
+            <div class="row-fluid">
+                <div class="span12">
+    
+                    <div id="headerSeparator"></div>
+
+                    <div class="row-fluid">
+                        <div class="span6">
+
+                            <div id="divHeaderText" class="page-content">
+                                <div id="divHeaderLine1">Un nou concepte d'allotjament</div><br />
+                                <div id="divHeaderLine2">Oferim habitatges confortables i equipats al centre de Girona per a tots aquells membres de la Comunitat Universària</div><br />
+                                <!--div id="divHeaderLine3"><a class="btn btn-large btn-primary" href="#">Primary Button</a></div-->
+                            </div>
+
+                        </div>
+                        <div class="span6">
+
+                            <div id="camera_wrap">
+								<div data-src="styles/img/capcelera1.png" ><div style="position:absolute;bottom:10%;left:3%;padding:10px;width:50%;" class="fadeFromRight camera_effected camera_caption cap1">Carles, aquí podem posar un text, o no.</div></div><div data-src="styles/img/capcelera2.png" ><div class="camera_caption fadeFromBottom cap2">Carles, aquí podem posar un text, o no.</div></div>
+								<div data-src="styles/img/capcelera3.png" ><div style="position:absolute;bottom:10%;left:3%;padding:10px;width:50%;" class="fadeFromRight camera_effected camera_caption cap1">Carles, aquí podem posar un text, o no.</div></div><div data-src="styles/img/capcelera3.png" ><div class="camera_caption fadeFromBottom cap2">Carles, aquí podem posar un text, o no.</div></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="headerSeparator2"></div>
+        
+                </div>
+            </div>
+   
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+	 <!--div id="decorative1" style="position:relative">
     <div class="container">
 
         <div class="divPanel headerArea">
@@ -78,11 +124,85 @@
         </div>
 
     </div>
-</div>
+</div-->
 {% endblock %}
 
 {% block contingut %}
-   <h1>Benvingut</h1>
+
+        <div class="row-fluid">
+
+                <div class="span12" id="divMain">
+
+                    <h1>Benvingut</h1>
+
+                    <p>STUDENT LIFE   vol ser un nou concepte d'Allotjament per a Estudiants, ,Investigadors i  Professors Universitaris.Oferim Habitatges confortables i equipats al centre de Girona per a tots aquells membres de la Comunitat Universitària què s'estimen més viure a Girona i “Viure Girona”,per raons de preferència,situacionals (no totes les facultats estan ubicades al mateix indret)o de independència.”Independència sense Dependència”!. Habitatges Residencials Universitaris en règim de lloguer per mesos,setmanes i dies perquè tú escullis el que més t'interessa.
+                    </p>
+                    <p>  Nosaltres ens cuidem de la gestió dels serveis que un Allotjament d'aquestes característiques ha de tenir:    
+                    	<ul>
+                    		<li>Gestió dels Subministres i Consums(Aigua ,Electricitat,Gas,etc)</li>
+                    		<li>Comunicacions(Internet,Telèfon)</li>
+                    		<li>Neteja de l'Habitatge</li>
+                    		<li>Manteniment i Reparació de l'Habitatge.</li>
+                    	</ul>
+    	          </p>
+                    
+
+                    <hr style="margin:45px 0 35px" />
+
+                    <div class="lead">
+                        <h3>A STUDENT LIFE només volem que et preocupis del que és realment rellevant per a tu:</h3> 
+                        <h2>Estudiar, la Recerca i Impartir Coneixement</h2>
+                    </div>
+                    <br />
+
+                    <div class="list_carousel responsive">
+                        <ul id="list_photos">
+                            <li><img src="/styles/img/slider1.png" class="img-polaroid">  </li>
+                            <li><img src="/styles/img/slider2.png" class="img-polaroid">  </li>
+                            <li><img src="/styles/img/slider3.png" class="img-polaroid">  </li>
+                            <li><img src="/styles/img/slider4.png" class="img-polaroid">  </li>
+                            <li><img src="/styles/img/slider5.png" class="img-polaroid">  </li>
+                            <li><img src="/styles/img/slider6.png" class="img-polaroid">  </li>
+                        </ul>
+                    </div> 
+					
+                    <hr style="margin:45px 0 35px" />
+                    
+                    <h1>Filosofia</h1> 
+
+  					<p> STUDENT LIFE ofereix a La Comunitat Universitària (Estudiants,Investigadors,Professors)  Allotjaments en Habitatges Universitaris compartits situats al Barri Vell,Centre i altres indrets de la Ciutat de Girona.
+                    </p>
+                    <p>La nostra Filosofia és la d'oferir Allotjament Comfortable,Equipat i sense els maldecaps que comporten les Gestions Domèstiques,per a tots els Universitaris a qui els agrada viure a la Ciutat i “Viure la Ciutat”.</p>
+                    <p>També és la nostra preocupació el fet d'apropar les diferents Universitats,Facultats,Escoles Universitàries al domicili de l'Estudiant Universitari.Així podràs escollir l'Habitatge que més t'interessi en funció de la proximitat al teu Centre d'Estudi amb l'estalvi de temps i transport que això representa</p>
+                    <p> La vida d'Estudiant Universitari és certament apassionant però tots sabem que no és fàcil en els temps actuals.Sabent tot això tenim unes Tarifes adaptades a les teves necessitats perquè la teva butxaca no se'n ressenteixi i sempre amb els serveis i la gestió que tú necessites.</p>
+                    
+                    
+                    
+                    
+                    
+                    
+                   
+                    <br />
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--h1>Benvingut</h1>
 
                     <p>STUDENT LIFE   vol ser un nou concepte d'Allotjament per a Estudiants, ,Investigadors i  Professors Universitaris.Oferim Habitatges confortables i equipats al centre de Girona per a tots aquells membres de la Comunitat Universitària què s'estimen més viure a Girona i “Viure Girona”,per raons de preferència,situacionals (no totes les facultats estan ubicades al mateix indret)o de independència.”Independència sense Dependència”!. Habitatges Residencials Universitaris en règim de lloguer per mesos,setmanes i dies perquè tú escullis el que més t'interessa.
                     </p>
@@ -120,7 +240,7 @@
                     </p>
                     <p>La nostra Filosofia és la d'oferir Allotjament Comfortable,Equipat i sense els maldecaps que comporten les Gestions Domèstiques,per a tots els Universitaris a qui els agrada viure a la Ciutat i “Viure la Ciutat”.</p>
                     <p>També és la nostra preocupació el fet d'apropar les diferents Universitats,Facultats,Escoles Universitàries al domicili de l'Estudiant Universitari.Així podràs escollir l'Habitatge que més t'interessi en funció de la proximitat al teu Centre d'Estudi amb l'estalvi de temps i transport que això representa</p>
-                    <p> La vida d'Estudiant Universitari és certament apassionant però tots sabem que no és fàcil en els temps actuals.Sabent tot això tenim unes Tarifes adaptades a les teves necessitats perquè la teva butxaca no se'n ressenteixi i sempre amb els serveis i la gestió que tú necessites.</p>
+                    <p> La vida d'Estudiant Universitari és certament apassionant però tots sabem que no és fàcil en els temps actuals.Sabent tot això tenim unes Tarifes adaptades a les teves necessitats perquè la teva butxaca no se'n ressenteixi i sempre amb els serveis i la gestió que tú necessites.</p-->
                
 {% endblock %}
 

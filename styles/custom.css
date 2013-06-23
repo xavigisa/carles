@@ -215,7 +215,7 @@ img {max-width:100%;height:auto;width:auto;-moz-box-sizing:border-box;-webkit-bo
 
 
 
-body{zoom: 1; background-image: url(45degreee%20fabri%20c.png); background-position: inherit; background-position: -2000px -2000px; background-repeat: repeat repeat;}
+body{zoom: 1; background-image: url(grid.png); background-repeat: repeat repeat;}
 
 #divLogo{margin-top: 9px; margin-bottom: 0px; margin-left: -3px;}
 
@@ -275,7 +275,7 @@ h1{font-family: Cuprum; font-weight: normal; font-style: normal; font-size: 34px
 
 #decorative2{height: 70px; background-color: rgb(209, 63, 0); background-image: -webkit-linear-gradient(top, rgb(209, 63, 0), rgb(194, 58, 0));}
 
-#divFooter{font-family: 'Century Gothic', sans-serif; background-color: rgb(18, 18, 18); color: rgb(204, 204, 204); padding-top: 32px; line-height: 22px; font-size: 12px; text-transform: none;}
+#divFooter{font-family: 'Century Gothic', sans-serif; background-color: rgb(18, 18, 18); color: rgb(204, 204, 204); padding-top: 32px; line-height: 22px; font-size: 12px; text-transform: none; background-position: initial initial; background-repeat: initial initial;}
 
 #divFooter a{font-family: 'Century Gothic', sans-serif; color: rgb(128, 128, 128); font-size: 12px; line-height: 22px;}
 
@@ -287,9 +287,9 @@ h2{font-weight: normal; font-style: normal; ;font-family: Cuprum;}
 
 .breadcrumbs a{color: rgb(204, 61, 0); font-family: 'Century Gothic', sans-serif;}
 
-#divHeaderLine1{letter-spacing: 0px; word-spacing: 0px; margin-top: 0px; color: rgb(204, 0, 0); font-size: 59px; line-height: 74px; font-family: Ubuntu; text-transform: uppercase; text-shadow: none; font-weight: normal; font-style: normal; text-align: left; padding-left: 0px; padding-right: 0px; background-color: rgb(201, 172, 149);}
+#divHeaderLine1{letter-spacing: 0px; word-spacing: 0px; margin-top: 0px; color: rgb(176, 15, 0); font-size: 50px; line-height: 74px; font-family: Cuprum; text-transform: uppercase; text-shadow: none; font-weight: normal; font-style: normal; text-align: left;}
 
-#divHeaderLine2{font-size: 20px; line-height: 30px; letter-spacing: 1px; margin-top: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: rgb(5, 5, 5); text-shadow: none; text-align: left; font-weight: normal; font-style: italic;}
+#divHeaderLine2{font-size: 20px; line-height: 30px; letter-spacing: 1px; margin-top: 11px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: rgb(87, 86, 86); text-shadow: none; text-align: left; font-weight: normal; font-style: italic;}
 
 #divHeaderLine3{margin-top: 33px; color: rgb(0, 0, 0); text-align: left;}
 
@@ -309,7 +309,7 @@ a.btn, a.btn-large, a.btn-small, a.btn-mini {color:#333}
 
  .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {background-color:#c33b00;}
 
-#divHeaderText{padding-top: 136px; padding-bottom: 79px; border-color: rgb(51, 51, 51); text-align: right;}
+#divHeaderText{padding-top: 136px; padding-bottom: 79px; border-color: rgb(51, 51, 51);}
 
 #decorative2{background-image:-moz-linear-gradient(bottom,#c23a00,#d13f00);filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#d13f00, endColorstr=#c23a00);background-image:-o-linear-gradient(bottom,#c23a00,#d13f00);background-image:-webkit-gradient(linear,left top, left bottom,from(#c23a00),to(#d13f00));background-image:-webkit-linear-gradient(bottom,#c23a00,#d13f00);background-image:linear-gradient(bottom,#c23a00,#d13f00);}
 
@@ -339,19 +339,15 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Cup
 
 #divVideo{border: 7px solid rgb(255, 255, 255); margin-left: -5px; -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-top: 44px;}
 
-.nav .dropdown-toggle .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(0, 0, 0);}
+.navbar .dropdown-menu {background-color: rgb(255, 255, 255); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
 
-.nav .dropdown-toggle:hover .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(0, 0, 0);}
+.navbar .dropdown-menu li > a {color: rgb(0, 0, 0);}
 
-.navbar .dropdown-menu, .dropdown-menu {background-color: rgb(255, 255, 255); border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
-
-.navbar .dropdown-menu li > a, .dropdown-menu li > a, .navbar .nav-pills .open .dropdown-toggle {color: rgb(0, 0, 0);}
-
-.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a, .navbar .nav-pills .open a.dropdown-toggle:hover {filter:none;color:rgb(248, 248, 248);background-color:rgb(212, 64, 0);background-image:none}
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover {filter:none;color:rgb(248, 248, 248);background-color:rgb(212, 64, 0);background-image:none}
 
 .navbar .nav-pills > li > a {padding: 28px 30px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; color: rgb(255, 255, 255); margin-right: 2px; margin-left: 2px; border-bottom-style: none;}
 
-.navbar .nav-pills > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .navbar .nav-pills > li > a:focus {color: rgb(255, 255, 255); background-color: rgb(212, 64, 0); border-bottom-style: none;}
+.navbar .nav-pills > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle {color: rgb(255, 255, 255); background-color: rgb(212, 64, 0); border-bottom-style: none;}
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle {background:none}
 
@@ -359,7 +355,7 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Cup
 
 .navbar .ddmenu {margin-top: -2px; margin-bottom: 0px;}
 
-.navbar .nav-pills li.dropdown > .dropdown-toggle .caret, .navbar .nav-pills li.dropdown.open > .dropdown-toggle .caret, .navbar .nav-pills li.dropdown.active > .dropdown-toggle .caret, .navbar .nav-pills li.dropdown.open.active > .dropdown-toggle .caret {border-top-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);}
+.navbar .nav-pills li.dropdown > .dropdown-toggle .caret {border-top-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);}
 
 .navbar .nav-pills li.dropdown > .dropdown-toggle:hover .caret {border-top-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);}
 
@@ -467,6 +463,7 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Cup
     .navbar .ddmenu {margin-top: 0px;margin-bottom: 0px;}
 
 }
+
 
 
 
