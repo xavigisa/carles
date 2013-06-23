@@ -30,7 +30,6 @@ class Habitatge(db.Model):
     descripcio = db.TextProperty()
     descripcio_es = db.TextProperty()
     descripcio_en = db.TextProperty()
-    preu = db.FloatProperty()
     referencia = db.StringProperty()
     apartament = db.ReferenceProperty(Apartament)
     fotos = db.ListProperty(db.Key)
@@ -40,10 +39,11 @@ class Habitatge(db.Model):
         return f   
     
     def llistat_preus(self):
-        p = Preus().all().filter('habitatge =',self.key()).order('ordre')
+        p = Preu().all().filter('habitatge =',self.key())
+        return p
     
     
-class Preus(db.Model):
+class Preu(db.Model):
     descripcio = db.StringProperty()
     preu = db.FloatProperty()
     ordre = db.IntegerProperty()

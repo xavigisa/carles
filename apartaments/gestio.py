@@ -1,5 +1,5 @@
 from manegador.manegador import Handler
-from models import Apartament, Fotos, Habitatge
+from models import Apartament, Fotos, Habitatge, Preu
 from google.appengine.ext import db
 from google.appengine.api import users
 import json
@@ -58,7 +58,7 @@ class Habitatges(Handler):
             
             h = Habitatge(nom=nom,
                           descripcio = desc,
-                         preu = (float(preu)),
+                         referencia = referencia,
                          apartament = db.Key.from_path('Apartament',int(apartament_id)),
                           fotos = llista_fotos)
             
@@ -75,25 +75,24 @@ class Preus(Handler):
         
     def post(self):
         if self.Es_administrador():
-            nom = self.request.get('nom')
+            habitatge = self.request.get('habitatge')
             desc = self.request.get('descripcio')
-            lat =   self.request.get('lat')
-            lon = self.request.get('lon')
-            adreca = self.request.get('adreca')
+            preu =   self.request.get('preu')
+            ordre = self.request.get('ordre')
             
             
-            llista_fotos =[]
-            for file_data in self.request.POST.getall('imatges[]'):
-                f = Fotos(descripcio=file_data.filename, foto= file_data.value)
-                f.put()
-                llista_fotos.append(f.key())
                    
-            a = Apartament(nom=nom,
-                           localitzacio= db.GeoPt(float(lat), float(lon)),
-                           descripcio= desc,
-                           adreca = adreca,
-                           fotos = llista_fotos)
-            a.put()
+            p = Preu(     descripcio= desc,
+                           preu = float(preu),
+                           ordre = int(ordre),
+                           habitatge = db.Key.from_path("Habitatge", int(habitatge)))
+            p.put()
+        
+        
+        
+        
+        
+        
                         
                         
 class Consulta(Handler):

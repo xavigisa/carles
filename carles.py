@@ -7,9 +7,10 @@ from contacte.contacte import Contacte
 from apartaments.apartaments import Apartaments
 from apartaments.gestio import Gestio, Habitatges, Preus, Consulta
 from foto.foto import Foto, Foto_petita
+from enllacos.enllacos import Enllacos
+from suggerencies.suggerencies import Suggerencies
 
 import webapp2
-
 
 
 
@@ -28,6 +29,8 @@ app = webapp2.WSGIApplication([('/', Principal),
                                      ('/contacte',Contacte),
                                      ('/tarifes',Apartaments),
                                      ('/reserves',Reserves),
+                                     ('/enllacos',Enllacos),
+                                     ('/suggerencies',Suggerencies),
                                      ('/gestio/apartament',Gestio),
                                      ('/gestio/habitatge',Habitatges),
                                      ('/gestio/preus',Preus),

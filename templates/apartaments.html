@@ -5,7 +5,9 @@
 {% endblock %}
 
 
-                      		
+{% block aspecte %}
+	<link href="scripts/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" />  
+{% endblock %}   		
 
 
 {% block menu %}
@@ -24,7 +26,7 @@
                                 			
                                 			<li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
                                 			<li class="dropdown"><a href="/enllacos">Enllaços d'interés</a></li>
-                                			<li class="dropdown"><a href="/sugerencies">Sugerencies</a></li>
+                                			<li class="dropdown"><a href="/suggerencies">Suggerencies</a></li>
                                 
                                         </li>
                       
@@ -69,19 +71,31 @@
 		
 	
 				<div class="row-fluid">
-					
+						{% set nombre2 = 1 %}
 						{% for h in apar.llistat_habitatges() %}
 							<div class="span4 alert-success">
 	
 								<h3>{{h.nom}}</h3>
-								{% set nombre2 = 1 %}
+								
 								{% for x in h.llistat_fotos() %}
-									<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}"><img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" /></a>
-									{% set nombre2 = nombre2 +1 %}
+									<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}">
+										<img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" />	
+									</a>
+									
 								{% endfor %}
-							
+								{% set nombre2 = nombre2 + 1 %}
 								<div>{{h.descripcio}}</div>
-								<div ><span  class="span8 offset2 alert-error">Preu: {{h.preu}} euros</span></div>
+								
+								<span><strong>Referència:</strong> {{h.referencia}}</span>
+								<div  class="span8 offset2 alert-error">
+									<h4>Preus: </h4>
+									{% for x in h.llistat_preus() %}
+										<div>
+											<span><strong>{{x.descripcio}}: </strong>{{x.preu}} euros</span> 
+											
+										</div>
+									{% endfor %}
+								</div>
 							</div>
 						{% endfor %}
 					

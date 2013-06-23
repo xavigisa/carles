@@ -24,7 +24,7 @@
                                 			
                                 			<li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
                                 			<li class="dropdown"><a href="/enllacos">Enllaços d'interés</a></li>
-                                			<li class="dropdown"><a href="/suggerencies">Suggerencies</a></li>
+                                			<li class="dropdown active"><a href="/suggerencies">Suggerencies</a></li>
                                 
                                         </li>
                       
@@ -32,7 +32,7 @@
                                 </li>
                                 <li class="dropdown"><a href="/tarifes">Localització i Tarifes</a></li>
                                 <li class="dropdown"><a href="/contacte">Contacte</a></li>
-                                <li class="dropdown active"><a href="/reserves">Reserves</a></li>
+                                <li class="dropdown"><a href="/reserves">Reserves</a></li>
                             </ul>
                         </div>
 {% endblock %}
@@ -45,15 +45,10 @@
 			  <fieldset>
 			    <legend>Legend</legend>
 			    <label>Label name</label>
-			    <input type="text" name"prova" placeholder="Type something…">
-			    <span class="help-block">Example block-level help text here.</span>
-			    <label class="checkbox">
-			      <input type="checkbox"> Check me out
-			    </label>
-			    <h2>Fitxers Adjunts</h2>
-		   		<input type="file" name="imatges[]" id="imatges" multiple="" onchange="ferLlistaFitxers();"/>
-		   		<h2>Fitxers Seleccionats:</h2>
-				<ul id="fileList"><li>Cap fitxer adjuntat</li></ul>
+			    <input type="email" name"prova" placeholder="">
+			    
+			    
+			    
 			    
 			      <script type="text/javascript"
 				     src="http://www.google.com/recaptcha/api/challenge?k=6LdYHuMSAAAAAHVyyt9JLh5sxGOyTLCAh8NGn7WN">
@@ -74,23 +69,5 @@
             
 		</div>
 		
-		<script type="text/javascript">
-  function ferLlistaFitxers() {
-    var input = document.getElementById("imatges");
-    var ul = document.getElementById("fileList");
-    while (ul.hasChildNodes()) {
-      ul.removeChild(ul.firstChild);
-    } 
-    for (var i = 0; i < input.files.length; i++) {
-      var li = document.createElement("li");
-      li.innerHTML = input.files[i].name;
-      ul.appendChild(li);
-    }
-    if(!ul.hasChildNodes()) {
-      var li = document.createElement("li"); 
-      li.innerHTML = 'No Files Selected';
-      ul.appendChild(li);
-    }
-  } 
-</script>     
+    
 {% endblock %}
