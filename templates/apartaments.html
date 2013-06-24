@@ -43,6 +43,8 @@
 
 {% block contingut %}
 	{% set nombre = 1 %}
+	
+	
 	{% for apar in apartaments %}
 		<div class="sidebar">
 			<h1>{{apar.nom}}</h1>
@@ -56,14 +58,19 @@
 							{% endfor %}
 						</map>
 					</div>
-					<div id="fotos" class="span5">
-						<h3>Localització</h3>
-						<div  id="map-canvas{{nombre}}" style="width: 350px; height: 300px"></div>
-					</div>
+					
 					<div class="span4">
 						<h3>Descripció</h3>
 							{{apar.descripcio}}
 					</div>
+					
+					<div id="fotos" class="span5 sidebar">
+						<h3>Localització</h3>
+						<div class="sidebox">
+							<div  id="map-canvas{{nombre}}" style="width: 350px; height: 300px"></div>
+						</div>
+					</div>
+					
 				</div>
 				
 				
@@ -73,28 +80,29 @@
 				<div class="row-fluid">
 						{% set nombre2 = 1 %}
 						{% for h in apar.llistat_habitatges() %}
-							<div class="span4 alert-success">
-	
-								<h3>{{h.nom}}</h3>
-								
-								{% for x in h.llistat_fotos() %}
-									<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}">
-										<img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" />	
-									</a>
+							<div class="span4">
+								<div class="sidebox">
+									<h3>{{h.nom}}</h3>
 									
-								{% endfor %}
-								{% set nombre2 = nombre2 + 1 %}
-								<div>{{h.descripcio}}</div>
-								
-								<span><strong>Referència:</strong> {{h.referencia}}</span>
-								<div  class="span8 offset2 alert-error">
-									<h4>Preus: </h4>
-									{% for x in h.llistat_preus() %}
-										<div>
-											<span><strong>{{x.descripcio}}: </strong>{{x.preu}} euros</span> 
-											
-										</div>
+									{% for x in h.llistat_fotos() %}
+										<a href="fotos/{{x.key().id()}}" rel="prettyPhoto[image_map{{nombre}}{{nombre2}}]" title="{{h.nom}}">
+											<img src="fotos_petites/{{x.key().id()}}" class="img-polaroid" width="60" height="60" alt="{{h.nom}}" />	
+										</a>
+										
 									{% endfor %}
+									{% set nombre2 = nombre2 + 1 %}
+									<div>{{h.descripcio}}</div>
+									
+									<span><strong>Referència:</strong> {{h.referencia}}</span>
+									<div  class="alert-error">
+										<h4>Preus: </h4>
+										{% for x in h.llistat_preus() %}
+											<div>
+												<span><strong>{{x.descripcio}}: </strong>{{x.preu}} euros</span> 
+												
+											</div>
+										{% endfor %}
+									</div>
 								</div>
 							</div>
 						{% endfor %}
@@ -106,6 +114,7 @@
 				
 				{% set nombre = nombre +1 %}
 		 </div>
+		 
 		 
 	{% endfor %}
 	

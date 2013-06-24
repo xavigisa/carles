@@ -40,11 +40,15 @@
 
 
 {% block contingut %}
-		<div class="span4 offset4">
-			<form method="post" enctype="multipart/form-data">
+		<div class="span6 offset3"> 
+		  <div class="sidebox">
+			<form class="form-horizontal" method="post" enctype="multipart/form-data">
 			  <fieldset>
-			    <legend>Legend</legend>
-			    <label>Label name</label>
+			    <legend>Suggerències</legend>
+			    <textarea class="input-xxlarge" name="suggerencia" rows="7"></textarea>
+			    
+			    
+			    <label>Correu</label>
 			    <input type="email" name"prova" placeholder="">
 			    
 			    
@@ -61,11 +65,11 @@
 				     <input type="hidden" name="recaptcha_response_field"
 				         value="manual_challenge">
 				  </noscript>
-							    
-			    <button type="submit" class="btn">Submit</button>
+					<br/>	    
+			    <button type="submit" class="btn btn-primary btn-large">Enviar</button>
 			  </fieldset>
 			</form>
-			
+		  </div>
             
 		</div>
 		
