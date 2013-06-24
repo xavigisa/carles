@@ -24,7 +24,7 @@
                                 			
                                 			<li class="dropdown"><a href="/condicions">Condicions i contracte</a></li>
                                 			<li class="dropdown active"><a href="/enllacos">Enllaços d'interés</a></li>
-                                			<li class="dropdown"><a href="/suggerencies">Suggerencies</a></li>
+                                			<li class="dropdown"><a href="/suggerencies">Suggerències</a></li>
                                 
                                         </li>
                       
@@ -40,16 +40,44 @@
 
 
 {% block contingut %}
-		<div class="span6 offset3">
-			
-			<p>Aquí disposeu dels enllaços per descarregar-vos en format pdf:</p>
+		<div class="row-fluid">
+        <div class="span8" id="divMain">
+		
+			<div class="sidebox">
+				<h1>Enllaços d'interès</h1>
 				<ul>
-					<li><a href="fitxers/reglamentRI.pdf" target="_blank">Reglament de règim intern</a></li>
-					<li><a href="fitxers/contracte_student_life.pdf" target="_blank">Contracte</a></li>
-				</ul>			
-			
-			
+					<li><a href="http://www.girona.cat/web" target="_blank">Ajuntament de Girona</a></li>
+					<li><a href="http://www.udg.edu/" target="_blank">Universitat de Girona</a></li>
+				</ul>	
+				
+				<h1>Telèfons d'innterès</h1>
+				<h3>Ambulàncies</h3>
+				<div>061 / 972 410 010</div>
+				<h3>Urgències generals</h3>
+				<div>112</div>
+				<h3>Mossos d'Esquadra</h3>
+				<div>088 / 972 181 600</div>
+				<h3>Policia Local</h3>
+				<div>092 / 972 419 092</div>
+				<h3>Bombers</h3>
+				<div>112</div>
+				<h3>Estació autobusos</h3>
+				<div>972 212 319</div>
+				<h3>RENFE Girona</h3>
+				<div>902 240 202</div>
+
+
+
+			</div>
 
 				<!--embed id="mostrar_pdf" src="fitxers/reglamentRI.pdf" width="700" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">></embed-->
 		</div>
+                <div class="span4 sidebar">
+
+                    <div class="sidebox">
+                        <img src="http://placehold.it/600x600/e7e7e7" class="img-polaroid" style="margin:12px 0px;">                       
+                    </div>
+                    
+                </div>
+</div>
 {% endblock %}
